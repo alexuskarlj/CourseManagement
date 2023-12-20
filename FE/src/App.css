@@ -1,0 +1,352 @@
+/* Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  text-align: left;
+}
+
+/* Main Content Styles */
+.course-list-container {
+  width: 100%;
+  padding: 20px;
+  position: relative; /* For positioning the Add Course button */
+}
+
+/* Course List Title */
+.courses-title {
+  font-size: 2em;
+  color: #333;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Add Course Button */
+.btn-add-course {
+  position: absolute;
+  top: 20px;
+  right: calc((100% - 80%) / 2); /* Assuming the table is 80% of the width */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.btn-add-course:hover {
+  background-color: #0056b3;
+}
+
+/* Table Styles */
+.table {
+  width: 80%;
+  margin: 20px auto 0 auto; /* Centers the table with margin */
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #555;
+  color: white;
+}
+
+/* Action Button Styles */
+.action-buttons .btn {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-button.update {
+  background-color: #ffc107;
+  color: black;
+}
+
+.action-button.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.action-button.view {
+  background-color: #17a2b8;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn-add-course {
+    position: static;
+    display: block;
+    width: auto;
+    margin-top: 1em;
+  }
+
+  .table {
+    width: 95%;
+  }
+
+  .course-list-container {
+    padding: 20px 10px;
+  }
+
+  .courses-title {
+    font-size: 1.5em;
+  }
+}
+
+/* Course Form Container */
+.course-form-container {
+  width: 100%;
+  max-width: 500px; /* Set a max-width for the form */
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between form items */
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Button specific to the course form */
+.btn-save-course {
+  background-color: #28a745; /* Bootstrap success color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-save-course:hover {
+  background-color: #218838; /* A darker shade for hover state */
+}
+
+
+/* Update Button */
+.btn-update {
+  background-color: #007BFF; /* Gray color */
+  color: #fff; /* White text */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px; /* Spacing between buttons */
+  text-decoration: none; /* Remove underlines */
+  display: block; /* Display buttons as blocks */
+  width: 100%; /* Full width */
+  text-align: center; /* Center text */
+}
+
+.btn-update:hover {
+  background-color: #002b58; /* Blue on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* View Button */
+.btn-view {
+  background-color: #007BFF; /* Gray color */
+  color: #fff; /* White text */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px; /* Spacing between buttons */
+  text-decoration: none; /* Remove underlines */
+  display: block; /* Display buttons as blocks */
+  width: 100%; /* Full width */
+  text-align: center; /* Center text */
+}
+
+.btn-view:hover {
+  background-color: #002b58; /* Blue on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* Delete Button */
+.btn-delete {
+  background-color: #DC3545; /* Gray color */
+  color: #fff; /* White text */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px; /* Spacing between buttons */
+  text-decoration: none; /* Remove underlines */
+  display: block; /* Display buttons as blocks */
+  width: 100%; /* Full width */
+  text-align: center; /* Center text */
+}
+
+.btn-delete:hover {
+  background-color: #6c010c; /* Red on hover */
+  color: #fff; /* White text on hover */
+}
+
+
+/* View Page Container */
+.course-view-container {
+  width: 100%;
+  max-width: 500px; /* Set a max-width for the view page */
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* View Page Content */
+.course-view {
+  text-align: left;
+}
+
+.course-view h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.course-view p {
+  margin-bottom: 20px;
+}
+
+/* Back Button */
+.btn-back {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+  display: inline-block;
+  margin-right: 10px;
+  transition: background-color 0.2s; /* Smooth transition on hover */
+}
+
+.btn-back:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Existing styles */
+
+/* Add styles for the DeleteCourseModal */
+.delete-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's on top of other content */
+}
+
+.delete-modal-content {
+  background: #fff; /* White background for the modal */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px; /* Adjust the maximum width as needed */
+}
+
+.delete-modal h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.delete-modal p {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Style the buttons within the DeleteCourseModal */
+.delete-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Update Button */
+.btn-confirm {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: auto;
+  text-align: center;
+}
+
+.btn-confirm:hover {
+  background-color: #002b58;
+}
+
+/* Cancel Button */
+.btn-cancel {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: auto;
+  text-align: center;
+}
+
+.btn-cancel:hover {
+  background-color: #6c010c;
+}
