@@ -19,7 +19,7 @@ Clone the repository to your local machine:
 
    ```bash
    git clone https://github.com/alexuskarlj/CourseManagement.git
-
+   ```
 #### Backend
 
 - Install Python 3.9 version above
